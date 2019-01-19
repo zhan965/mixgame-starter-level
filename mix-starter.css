@@ -1,0 +1,201 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*{
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+html{
+  height: 100%;
+  width: 100%;
+}
+
+header {
+  width: 100%;
+  height: 35px;
+  background-color: rgb(241, 241, 241);
+  border-bottom: 1px solid rgb(30, 252, 5);
+  position: relative;
+}
+header p {
+  position: absolute;
+  font-size: 22px;
+  margin: 0 auto;
+  bottom: 0;
+  left: 50%;
+  margin-left: -70.5px;
+  color: rgb(157, 157, 156);
+  font-family: 'Oswald', sans-serif;
+}
+body{
+  height: 100%;
+  width: 100%;
+}
+.main{
+  display: grid;
+  grid-gap: 8px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  height: 400px;
+  width: 95%;
+  margin:0 auto;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.box{
+  height: 100%;
+  width: 100%;
+  /* max-width: 90px;
+  max-height: 90px; */
+  justify-self: center;
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+
+@media (min-width: 550px){
+  .main {
+    width: 400px;
+  }
+}
+
+
+.blue {
+  background-image: url('https://i.imgur.com/bYL98Pe.png');
+}
+.cinamon{
+  background-image: url('https://i.imgur.com/K0eineL.png');
+}
+
+.dblue{
+  background-image: url('https://i.imgur.com/jXPQ8P1.png');
+}
+
+.dpurple{
+  background-image: url('https://i.imgur.com/xXAdhvs.png');
+}
+
+.gold{
+  background-image: url('https://i.imgur.com/kty8bmK.png');
+}
+
+.green{
+  background-image: url('https://i.imgur.com/f748uOa.png');
+}
+.orange{
+  background-image: url('https://i.imgur.com/cJ33REa.png');
+}
+
+.purple{
+  background-image: url('https://i.imgur.com/vFgKcrS.png');
+}
+
+.red{
+  background-image: url('https://i.imgur.com/smHU6Qj.png');
+}
+.yellow{
+  background-image: url('https://i.imgur.com/sG6wD4k.png');
+}
+
+
+.open {
+  background-color: none !important;
+}
+
+.match {
+  border-radius: 10px;
+  /* background-color: rgba(21, 131, 252, 0.5); */
+  animation: matchBlinker 1.4s;
+  animation-fill-mode: forwards;
+}
+
+.close {
+  background-color: rgb(76, 11, 124);
+  border-radius: 15px;
+  border: 3px solid rgb(181, 184, 190);
+  background-image: none;
+  box-shadow: 2px 2px 6px black;
+  transform: rotateZ(360deg);
+  transition: transform 1.5s, background-color 1.2s;
+}
+
+.info{
+  height: 200px;
+  width: 200px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.time {
+  display: inline-block;
+  border-radius: 20px;
+  padding: 7px;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(57, 169, 212, 0.92);
+  margin-top: 15px;
+  margin-right: 1px;
+  box-shadow: 3px 3px 4px grey;
+  display: none;
+}
+
+.info_time-display{
+  padding-top: 5px;
+  color: white;
+}
+
+.wrongs{
+  display: inline-block;
+  border-radius: 20px;
+  padding: 7px;
+  text-align: center;
+  height: 60px;
+  width: 60px;
+  background-color: rgba(54, 236, 35, 0.92);
+  margin-top: 15px;
+  margin-left: 1px;
+  box-shadow: 3px 3px 4px grey;
+ display: none;
+}
+
+.wrongs_display{
+  padding-top: 5px;
+  color: red;
+}
+
+@keyframes matchBlinker {
+  0%  { background-color:  white; opacity: 1.0;}
+   16.66%  { background-color: rgb(43, 184, 19); opacity: 1.0; }
+    33.32%  { background-color:  white; opacity: 1.0;}
+      49.98%   { background-color: rgb(43, 184, 19); opacity: 1.0; }
+        66.64%  { background-color:  white; opacity: 1.0;}
+          83.3%   { background-color: rgb(43, 184, 19); opacity: 1.0;}
+            100% {
+               background-color: rgba(21, 131, 252, 0.5);
+               opacity: 0.5;
+             }
+}
+
+@keyframes dissapear{
+0%{
+    opacity: 1;
+    transform: : rotateX(90deg);
+}
+50%{
+    opacity: 0.6;
+    transform: : rotateX(0deg);
+}
+100%{
+    opacity: 0;
+    transform: rotateX(90deg);
+    display: none;
+}
+}
+
+*:focus { outline:0 !important; }
